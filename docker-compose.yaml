@@ -33,7 +33,7 @@ services:
 
     mongo:
       image: mongo:latest
-      build: ./mongo
+      
       
       
     
