@@ -28,7 +28,7 @@ services:
     
 
     mongo:
-      image: mongo:latest
+      
     
 
     mongo-seed:
