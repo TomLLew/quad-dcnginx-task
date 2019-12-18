@@ -2,18 +2,35 @@
 version: '3.7'
 services:
     nginx:
+      image: nginx:latest
+      ports: 
+       -target: 80
+        published: 80
+        protocol: tcp 
+      volumes:
+       -type: bind
+        source: ./nginx/nginx.conf
+        target: /etc/nginx/nginx.conf
 
 
     server:
-
+      image: thomas/server:v1
+      build:
+        context: .
+        dockerfile: ./server/Dockerfile
 
     client:
+      image: thomas/client:v1
+      build:
+        context: .
+        dockerfile: ./client/Dockerfile
     
       environment:
       - REACT_APP_SERVICE_HOST=${REACT_APP_SERVICE_HOST}
     
 
     mongo:
+      image: mongo:latest
     
 
     mongo-seed:
