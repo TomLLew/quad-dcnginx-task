@@ -15,15 +15,13 @@ services:
 
     server:
       image: thomas/server:v1
-      build:
-        context: .
-        dockerfile: ./server/Dockerfile
+      build: ./server
+       
 
     client:
       image: thomas/client:v1
-      build:
-        context: .
-        dockerfile: ./client/Dockerfile
+      build: ./client
+      
     
       environment:
       - REACT_APP_SERVICE_HOST=${REACT_APP_SERVICE_HOST}
