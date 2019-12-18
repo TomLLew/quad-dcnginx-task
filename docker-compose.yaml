@@ -17,7 +17,7 @@ services:
       image: thomas/server:v1
       build: ./server
       ports:
-      - target: 8081
+      - target: 3000
        
 
     client:
