@@ -19,14 +19,12 @@ services:
 
 
     server:
-      image: server:v1
       build: ./server
       ports:
       - target: 3000
        
 
     client:
-      image: client:v1
       build: ./client
       ports:
       - target: 8080
