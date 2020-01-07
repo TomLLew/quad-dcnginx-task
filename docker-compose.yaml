@@ -19,12 +19,14 @@ services:
 
 
     server:
+      image: server      
       build: ./server
       
       
        
 
     client:
+      image: client
       build: ./client
             
     
