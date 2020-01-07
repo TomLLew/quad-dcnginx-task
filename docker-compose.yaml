@@ -2,7 +2,7 @@
 version: '3.7'
 services:
     nginx:
-      image: nginx:latest
+      image: nginx:alpine
       ports: 
       - target: 80
         published: 80
@@ -19,14 +19,14 @@ services:
 
 
     server:
-      image: server      
+      image: 10.154.0.49:5000/server      
       build: ./server
       
       
        
 
     client:
-      image: client
+      image: 10.154.0.49:5000/client
       build: ./client
             
     
